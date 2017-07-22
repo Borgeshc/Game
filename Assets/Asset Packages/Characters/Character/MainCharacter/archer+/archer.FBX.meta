@@ -1,0 +1,605 @@
+fileFormatVersion: 2
+guid: d4bcfbd572c8c1b4f812f801939d8621
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: _00_helm
+    100002: _02_body_up
+    100004: _03_body_down
+    100006: //RootNode
+    100008: Armor_00
+    100010: Bip01
+    100012: Bip01 HeadNub
+    100014: Bip01_Footsteps
+    100016: Bip01_Head
+    100018: Bip01_L_Calf
+    100020: Bip01_L_Clavicle
+    100022: Bip01_L_Finger0
+    100024: Bip01_L_Finger01
+    100026: Bip01_L_Finger0Nub
+    100028: Bip01_L_Finger1
+    100030: Bip01_L_Finger11
+    100032: Bip01_L_Finger1Nub
+    100034: Bip01_L_Foot
+    100036: Bip01_L_Forearm
+    100038: Bip01_L_Hand
+    100040: Bip01_L_Thigh
+    100042: Bip01_L_Toe0
+    100044: Bip01_L_Toe0Nub
+    100046: Bip01_L_UpperArm
+    100048: Bip01_Neck
+    100050: Bip01_Pelvis
+    100052: Bip01_R_Calf
+    100054: Bip01_R_Clavicle
+    100056: Bip01_R_Finger0
+    100058: Bip01_R_Finger01
+    100060: Bip01_R_Finger0Nub
+    100062: Bip01_R_Finger1
+    100064: Bip01_R_Finger11
+    100066: Bip01_R_Finger1Nub
+    100068: Bip01_R_Foot
+    100070: Bip01_R_Forearm
+    100072: Bip01_R_Hand
+    100074: Bip01_R_Thigh
+    100076: Bip01_R_Toe0
+    100078: Bip01_R_Toe0Nub
+    100080: Bip01_R_UpperArm
+    100082: Bip01_Spine
+    100084: Bip01_Spine1
+    100086: BodyRig
+    100088: Bone05
+    100090: bone_spaulders_L
+    100092: bone_spaulders_R
+    100094: Chest
+    100096: Down
+    100098: face
+    100100: fBone01
+    100102: fBone03
+    100104: fBone04
+    100106: hair
+    100108: LeftHandOne
+    100110: LeftHandOne_01
+    100112: LeftHandOne_02
+    100114: LeftHandOne_03
+    100116: LeftHandOne_04
+    100118: LeftHandOne_1
+    100120: Name
+    100122: RightHandOne
+    100124: xBone02
+    100126: xiongb
+    100128: _01_shoulder
+    100130: B_jianjia_L
+    100132: B_jianjia_R
+    100134: fBone02
+    100136: gongjian_wuqi07
+    100138: Particle View 01s
+    100140: Particle View 01s 1
+    100142: Particle View 01s 10
+    100144: Particle View 01s 11
+    100146: Particle View 01s 12
+    100148: Particle View 01s 13
+    100150: Particle View 01s 14
+    100152: Particle View 01s 15
+    100154: Particle View 01s 2
+    100156: Particle View 01s 3
+    100158: Particle View 01s 4
+    100160: Particle View 01s 5
+    100162: Particle View 01s 6
+    100164: Particle View 01s 7
+    100166: Particle View 01s 8
+    100168: Particle View 01s 9
+    100170: gongjain_wuqi04
+    100172: gongjian_05
+    100174: gongjian_wq02
+    100176: gongjian_wq03
+    100178: gongjian_wuqi01
+    100180: gongjian_wuqi06
+    100182: _00_helm 1
+    100184: _01_shoulder 1
+    100186: _02_body_up 1
+    100188: _03_body_down 1
+    100190: Armor_01
+    100192: neck
+    100194: _00_helm 2
+    100196: _01_shoulder 2
+    100198: _02_body_up 2
+    100200: _03_body_down 2
+    100202: Armor_02
+    100204: _00_helm 3
+    100206: _01_shoulder 3
+    100208: _02_body_up 3
+    100210: _03_body_down 3
+    100212: Armor_03
+    100214: 00_helm
+    100216: 01_shoulder
+    100218: 02_body_up
+    100220: 03_body_down
+    100222: Armor_04
+    100224: _00_helm 4
+    100226: _01_shoulder 4
+    100228: _02_body_up 4
+    100230: _03_body_down 4
+    100232: _00_helm 5
+    100234: _01_shoulder 5
+    100236: _02_body_up 5
+    100238: _03_body_down 5
+    100240: Armor_05
+    100242: 00-face
+    100244: 00-neck
+    100246: 05-5001023
+    100248: 05-5001024
+    100250: 05-5001025
+    100252: 05-5001026
+    100254: 05-5001027
+    100256: 05-5001028
+    100258: 06-6001023
+    100260: 06-6001024
+    100262: 06-6001025
+    100264: 06-6001026
+    100266: 06-6001027
+    100268: 06-6001028
+    100270: 07-7001023
+    100272: 07-7001024
+    100274: 07-7001025
+    100276: 07-7001026
+    100278: 07-7001027
+    100280: 07-7001028
+    100282: 08-8001023
+    100284: 08-8001024
+    100286: 08-8001025
+    100288: 08-8001026
+    100290: 08-8001027
+    100292: 08-8001028
+    100294: 05-1000
+    100296: 05-1010
+    100298: 05-1020
+    100300: 05-1030
+    100302: 05-1040
+    100304: 05-1050
+    100306: 05-1060
+    100308: 06-1002
+    100310: 06-1012
+    100312: 06-1022
+    100314: 06-1032
+    100316: 06-1042
+    100318: 06-1052
+    100320: 06-1062
+    100322: 07-1001
+    100324: 07-1011
+    100326: 07-1021
+    100328: 07-1031
+    100330: 07-1041
+    100332: 07-1051
+    100334: 07-1061
+    100336: 08-1003
+    100338: 08-1013
+    100340: 08-1023
+    100342: 08-1033
+    100344: 08-1043
+    100346: 08-1053
+    100348: 08-1063
+    100350: ' 1'
+    100352: Armor_06
+    100354: Armor_07
+    400000: _00_helm
+    400002: _02_body_up
+    400004: _03_body_down
+    400006: //RootNode
+    400008: Armor_00
+    400010: Bip01
+    400012: Bip01 HeadNub
+    400014: Bip01_Footsteps
+    400016: Bip01_Head
+    400018: Bip01_L_Calf
+    400020: Bip01_L_Clavicle
+    400022: Bip01_L_Finger0
+    400024: Bip01_L_Finger01
+    400026: Bip01_L_Finger0Nub
+    400028: Bip01_L_Finger1
+    400030: Bip01_L_Finger11
+    400032: Bip01_L_Finger1Nub
+    400034: Bip01_L_Foot
+    400036: Bip01_L_Forearm
+    400038: Bip01_L_Hand
+    400040: Bip01_L_Thigh
+    400042: Bip01_L_Toe0
+    400044: Bip01_L_Toe0Nub
+    400046: Bip01_L_UpperArm
+    400048: Bip01_Neck
+    400050: Bip01_Pelvis
+    400052: Bip01_R_Calf
+    400054: Bip01_R_Clavicle
+    400056: Bip01_R_Finger0
+    400058: Bip01_R_Finger01
+    400060: Bip01_R_Finger0Nub
+    400062: Bip01_R_Finger1
+    400064: Bip01_R_Finger11
+    400066: Bip01_R_Finger1Nub
+    400068: Bip01_R_Foot
+    400070: Bip01_R_Forearm
+    400072: Bip01_R_Hand
+    400074: Bip01_R_Thigh
+    400076: Bip01_R_Toe0
+    400078: Bip01_R_Toe0Nub
+    400080: Bip01_R_UpperArm
+    400082: Bip01_Spine
+    400084: Bip01_Spine1
+    400086: BodyRig
+    400088: Bone05
+    400090: bone_spaulders_L
+    400092: bone_spaulders_R
+    400094: Chest
+    400096: Down
+    400098: face
+    400100: fBone01
+    400102: fBone03
+    400104: fBone04
+    400106: hair
+    400108: LeftHandOne
+    400110: LeftHandOne_01
+    400112: LeftHandOne_02
+    400114: LeftHandOne_03
+    400116: LeftHandOne_04
+    400118: LeftHandOne_1
+    400120: Name
+    400122: RightHandOne
+    400124: xBone02
+    400126: xiongb
+    400128: _01_shoulder
+    400130: B_jianjia_L
+    400132: B_jianjia_R
+    400134: fBone02
+    400136: gongjian_wuqi07
+    400138: Particle View 01s
+    400140: Particle View 01s 1
+    400142: Particle View 01s 10
+    400144: Particle View 01s 11
+    400146: Particle View 01s 12
+    400148: Particle View 01s 13
+    400150: Particle View 01s 14
+    400152: Particle View 01s 15
+    400154: Particle View 01s 2
+    400156: Particle View 01s 3
+    400158: Particle View 01s 4
+    400160: Particle View 01s 5
+    400162: Particle View 01s 6
+    400164: Particle View 01s 7
+    400166: Particle View 01s 8
+    400168: Particle View 01s 9
+    400170: gongjain_wuqi04
+    400172: gongjian_05
+    400174: gongjian_wq02
+    400176: gongjian_wq03
+    400178: gongjian_wuqi01
+    400180: gongjian_wuqi06
+    400182: _00_helm 1
+    400184: _01_shoulder 1
+    400186: _02_body_up 1
+    400188: _03_body_down 1
+    400190: Armor_01
+    400192: neck
+    400194: _00_helm 2
+    400196: _01_shoulder 2
+    400198: _02_body_up 2
+    400200: _03_body_down 2
+    400202: Armor_02
+    400204: _00_helm 3
+    400206: _01_shoulder 3
+    400208: _02_body_up 3
+    400210: _03_body_down 3
+    400212: Armor_03
+    400214: 00_helm
+    400216: 01_shoulder
+    400218: 02_body_up
+    400220: 03_body_down
+    400222: Armor_04
+    400224: _00_helm 4
+    400226: _01_shoulder 4
+    400228: _02_body_up 4
+    400230: _03_body_down 4
+    400232: _00_helm 5
+    400234: _01_shoulder 5
+    400236: _02_body_up 5
+    400238: _03_body_down 5
+    400240: Armor_05
+    400242: 00-face
+    400244: 00-neck
+    400246: 05-5001023
+    400248: 05-5001024
+    400250: 05-5001025
+    400252: 05-5001026
+    400254: 05-5001027
+    400256: 05-5001028
+    400258: 06-6001023
+    400260: 06-6001024
+    400262: 06-6001025
+    400264: 06-6001026
+    400266: 06-6001027
+    400268: 06-6001028
+    400270: 07-7001023
+    400272: 07-7001024
+    400274: 07-7001025
+    400276: 07-7001026
+    400278: 07-7001027
+    400280: 07-7001028
+    400282: 08-8001023
+    400284: 08-8001024
+    400286: 08-8001025
+    400288: 08-8001026
+    400290: 08-8001027
+    400292: 08-8001028
+    400294: 05-1000
+    400296: 05-1010
+    400298: 05-1020
+    400300: 05-1030
+    400302: 05-1040
+    400304: 05-1050
+    400306: 05-1060
+    400308: 06-1002
+    400310: 06-1012
+    400312: 06-1022
+    400314: 06-1032
+    400316: 06-1042
+    400318: 06-1052
+    400320: 06-1062
+    400322: 07-1001
+    400324: 07-1011
+    400326: 07-1021
+    400328: 07-1031
+    400330: 07-1041
+    400332: 07-1051
+    400334: 07-1061
+    400336: 08-1003
+    400338: 08-1013
+    400340: 08-1023
+    400342: 08-1033
+    400344: 08-1043
+    400346: 08-1053
+    400348: 08-1063
+    400350: ' 1'
+    400352: Armor_06
+    400354: Armor_07
+    2300000: gongjian_wuqi07
+    2300002: gongjian_wuqi06
+    3300000: gongjian_wuqi07
+    3300002: gongjian_wuqi06
+    4300000: hair
+    4300002: _00_helm
+    4300004: face
+    4300006: _02_body_up
+    4300008: _03_body_down
+    4300010: gongjian_wuqi07
+    4300012: _01_shoulder
+    4300014: gongjian_wuqi01
+    4300016: gongjian_wq02
+    4300018: gongjian_wq03
+    4300020: gongjain_wuqi04
+    4300022: gongjian_05
+    4300024: gongjian_wuqi06
+    4300026: _02_body_up
+    4300028: _03_body_down
+    4300030: _00_helm
+    4300032: _01_shoulder
+    4300034: neck
+    4300036: _00_helm
+    4300038: _02_body_up
+    4300040: _01_shoulder
+    4300042: _03_body_down
+    4300044: _00_helm
+    4300046: _02_body_up
+    4300048: _01_shoulder
+    4300050: _03_body_down
+    4300052: 02_body_up
+    4300054: 00_helm
+    4300056: 01_shoulder
+    4300058: 03_body_down
+    4300060: _02_body_up
+    4300062: _00_helm
+    4300064: _01_shoulder
+    4300066: _03_body_down
+    4300068: _02_body_up
+    4300070: _00_helm
+    4300072: _01_shoulder
+    4300074: _03_body_down
+    4300076: 00-face
+    4300078: 08-8001023
+    4300080: 05-5001023
+    4300082: 00-neck
+    4300084: 07-7001023
+    4300086: 06-6001023
+    4300088: 06-6001024
+    4300090: 07-7001024
+    4300092: 08-8001024
+    4300094: 05-5001024
+    4300096: 08-8001025
+    4300098: 07-7001025
+    4300100: 06-6001025
+    4300102: 05-5001025
+    4300104: 08-8001026
+    4300106: 07-7001026
+    4300108: 06-6001026
+    4300110: 05-5001026
+    4300112: 06-6001027
+    4300114: 08-8001027
+    4300116: 07-7001027
+    4300118: 05-5001027
+    4300120: 06-6001028
+    4300122: 08-8001028
+    4300124: 07-7001028
+    4300126: 05-5001028
+    4300128: 05-1000
+    4300130: 08-1003
+    4300132: 07-1001
+    4300134: 06-1002
+    4300136: 08-1013
+    4300138: 07-1011
+    4300140: 05-1010
+    4300142: 06-1012
+    4300144: 07-1021
+    4300146: 08-1023
+    4300148: 05-1020
+    4300150: 06-1022
+    4300152: 05-1030
+    4300154: 08-1033
+    4300156: 06-1032
+    4300158: 07-1031
+    4300160: 08-1043
+    4300162: 07-1041
+    4300164: 05-1040
+    4300166: 06-1042
+    4300168: 05-1050
+    4300170: 07-1051
+    4300172: 08-1053
+    4300174: 06-1052
+    4300176: 05-1060
+    4300178: 07-1061
+    4300180: 08-1063
+    4300182: 06-1062
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: _00_helm
+    13700002: _02_body_up
+    13700004: _03_body_down
+    13700006: face
+    13700008: hair
+    13700010: _01_shoulder
+    13700012: gongjian_wuqi07
+    13700014: gongjain_wuqi04
+    13700016: gongjian_05
+    13700018: gongjian_wq02
+    13700020: gongjian_wq03
+    13700022: gongjian_wuqi01
+    13700024: gongjian_wuqi06
+    13700026: _00_helm 1
+    13700028: _01_shoulder 1
+    13700030: _02_body_up 1
+    13700032: _03_body_down 1
+    13700034: neck
+    13700036: _00_helm 2
+    13700038: _01_shoulder 2
+    13700040: _02_body_up 2
+    13700042: _03_body_down 2
+    13700044: _00_helm 3
+    13700046: _01_shoulder 3
+    13700048: _02_body_up 3
+    13700050: _03_body_down 3
+    13700052: 00_helm
+    13700054: 01_shoulder
+    13700056: 02_body_up
+    13700058: 03_body_down
+    13700060: _00_helm 4
+    13700062: _01_shoulder 4
+    13700064: _02_body_up 4
+    13700066: _03_body_down 4
+    13700068: _00_helm 5
+    13700070: _01_shoulder 5
+    13700072: _02_body_up 5
+    13700074: _03_body_down 5
+    13700076: 00-face
+    13700078: 00-neck
+    13700080: 05-5001023
+    13700082: 05-5001024
+    13700084: 05-5001025
+    13700086: 05-5001026
+    13700088: 05-5001027
+    13700090: 05-5001028
+    13700092: 06-6001023
+    13700094: 06-6001024
+    13700096: 06-6001025
+    13700098: 06-6001026
+    13700100: 06-6001027
+    13700102: 06-6001028
+    13700104: 07-7001023
+    13700106: 07-7001024
+    13700108: 07-7001025
+    13700110: 07-7001026
+    13700112: 07-7001027
+    13700114: 07-7001028
+    13700116: 08-8001023
+    13700118: 08-8001024
+    13700120: 08-8001025
+    13700122: 08-8001026
+    13700124: 08-8001027
+    13700126: 08-8001028
+    13700128: 05-1000
+    13700130: 05-1010
+    13700132: 05-1020
+    13700134: 05-1030
+    13700136: 05-1040
+    13700138: 05-1050
+    13700140: 05-1060
+    13700142: 06-1002
+    13700144: 06-1012
+    13700146: 06-1022
+    13700148: 06-1032
+    13700150: 06-1042
+    13700152: 06-1052
+    13700154: 06-1062
+    13700156: 07-1001
+    13700158: 07-1011
+    13700160: 07-1021
+    13700162: 07-1031
+    13700164: 07-1041
+    13700166: 07-1051
+    13700168: 07-1061
+    13700170: 08-1003
+    13700172: 08-1013
+    13700174: 08-1023
+    13700176: 08-1033
+    13700178: 08-1043
+    13700180: 08-1053
+    13700182: 08-1063
+    13700184: ' 1'
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 0
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 

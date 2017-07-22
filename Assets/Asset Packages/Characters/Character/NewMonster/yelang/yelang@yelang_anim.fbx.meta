@@ -1,0 +1,317 @@
+fileFormatVersion: 2
+guid: 3e2a55c15ff05a4408d0acae97195826
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Bip01_Tail3
+    100002: Bip01_Tail2
+    100004: Bip01_Tail1
+    100006: Bip01_Tail
+    100008: Bip01_R_Toe0Nub
+    100010: Bip01_R_Toe0
+    100012: Bip01_R_Foot
+    100014: Bip01_R_Calf
+    100016: Bip01_R_Thigh
+    100018: Bip01_L_Toe0Nub
+    100020: Bip01_L_Toe0
+    100022: Bip01_L_Foot
+    100024: Bip01_L_Calf
+    100026: Bip01_L_Thigh
+    100028: Pendant_Chest
+    100030: Bip01_R_Finger0
+    100032: Bip01_R_Hand
+    100034: Bip01_R_Forearm
+    100036: Bip01_L_Finger0
+    100038: Bip01_L_Hand
+    100040: Bip01_L_Forearm
+    100042: Pendant_Head
+    100044: Bone01
+    100046: Bip01_HeadNub
+    100048: Name
+    100050: Chest
+    100052: Down
+    100054: Bip01_TailNub
+    100056: Bip01_Head
+    100058: Bip01_Neck1
+    100060: Bip01_Neck
+    100062: Bip01_Spine2
+    100064: Bip01_Spine1
+    100066: Bip01_Spine
+    100068: Bip01_Pelvis
+    100070: Bip01_Footsteps
+    100072: Bip01
+    100074: BodyRig
+    100076: Bip01_L_HorseLink
+    100078: //RootNode
+    100080: Bip01_R_Finger0Nub
+    100082: Bip01_R_Clavicle
+    100084: Bip01_L_Clavicle
+    100086: Bip01_L_UpperArm
+    100088: Bip01_L_Finger0Nub
+    100090: Bip01_R_UpperArm
+    100092: Bip01_R_HorseLink
+    400000: Bip01_Tail3
+    400002: Bip01_Tail2
+    400004: Bip01_Tail1
+    400006: Bip01_Tail
+    400008: Bip01_R_Toe0Nub
+    400010: Bip01_R_Toe0
+    400012: Bip01_R_Foot
+    400014: Bip01_R_Calf
+    400016: Bip01_R_Thigh
+    400018: Bip01_L_Toe0Nub
+    400020: Bip01_L_Toe0
+    400022: Bip01_L_Foot
+    400024: Bip01_L_Calf
+    400026: Bip01_L_Thigh
+    400028: Pendant_Chest
+    400030: Bip01_R_Finger0
+    400032: Bip01_R_Hand
+    400034: Bip01_R_Forearm
+    400036: Bip01_L_Finger0
+    400038: Bip01_L_Hand
+    400040: Bip01_L_Forearm
+    400042: Pendant_Head
+    400044: Bone01
+    400046: Bip01_HeadNub
+    400048: Name
+    400050: Chest
+    400052: Down
+    400054: Bip01_TailNub
+    400056: Bip01_Head
+    400058: Bip01_Neck1
+    400060: Bip01_Neck
+    400062: Bip01_Spine2
+    400064: Bip01_Spine1
+    400066: Bip01_Spine
+    400068: Bip01_Pelvis
+    400070: Bip01_Footsteps
+    400072: Bip01
+    400074: BodyRig
+    400076: Bip01_L_HorseLink
+    400078: //RootNode
+    400080: Bip01_R_Finger0Nub
+    400082: Bip01_R_Clavicle
+    400084: Bip01_L_Clavicle
+    400086: Bip01_L_UpperArm
+    400088: Bip01_L_Finger0Nub
+    400090: Bip01_R_UpperArm
+    400092: Bip01_R_HorseLink
+    7400000: Take 001
+    7400002: yelang_s000
+    7400004: yelang_a000
+    7400006: yelang_h000
+    7400008: yelang_d000
+    7400010: yelang_r000
+    7400012: yelang_a001
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 3
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 3
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: yelang_s000
+      takeName: 
+      firstFrame: 0
+      lastFrame: 60
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: yelang_a000
+      takeName: 
+      firstFrame: 70
+      lastFrame: 102
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: yelang_h000
+      takeName: 
+      firstFrame: 114
+      lastFrame: 138
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: yelang_d000
+      takeName: 
+      firstFrame: 145
+      lastFrame: 185
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: yelang_r000
+      takeName: 
+      firstFrame: 195
+      lastFrame: 230
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: yelang_a001
+      takeName: 
+      firstFrame: 235
+      lastFrame: 265
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 7eefc69412daf2e4d9382e2b8673e08e,
+    type: 3}
+  animationType: 2
+  additionalBone: 0
+  userData: 

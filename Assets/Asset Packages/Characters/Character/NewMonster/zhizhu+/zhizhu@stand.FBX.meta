@@ -1,0 +1,323 @@
+fileFormatVersion: 2
+guid: 97bb7aadcc114c4478a4ef9782a240fb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armor_00
+    100002: BodyRig
+    100004: bone02
+    100006: bone03
+    100008: bone04
+    100010: bone05
+    100012: bone06
+    100014: bone07
+    100016: bone08
+    100018: bone09
+    100020: bone10
+    100022: bone11
+    100024: bone12
+    100026: bone13
+    100028: bone14
+    100030: bone15
+    100032: bone17
+    100034: bone18
+    100036: bone20
+    100038: bone21
+    100040: bone23
+    100042: bone24
+    100044: bone25
+    100046: bone26
+    100048: bone27
+    100050: bone29
+    100052: bone30
+    100054: bone31
+    100056: bone32
+    100058: bone33
+    100060: bone34
+    100062: breast
+    100064: Chest
+    100066: Down
+    100068: Dummy01
+    100070: Dummy02
+    100072: Dummy03
+    100074: Dummy04
+    100076: Dummy05
+    100078: Dummy06
+    100080: Dummy07
+    100082: Dummy08
+    100084: Dummy09
+    100086: Dummy10
+    100088: Dummy11
+    100090: head
+    100092: IK Chain01
+    100094: IK Chain02
+    100096: IK Chain03
+    100098: IK Chain04
+    100100: IK Chain05
+    100102: IK Chain06
+    100104: left_foot
+    100106: left_hand
+    100108: Name
+    100110: Particle View 01
+    100112: right_foot
+    100114: right_hand
+    100116: //RootNode
+    400000: Armor_00
+    400002: BodyRig
+    400004: bone02
+    400006: bone03
+    400008: bone04
+    400010: bone05
+    400012: bone06
+    400014: bone07
+    400016: bone08
+    400018: bone09
+    400020: bone10
+    400022: bone11
+    400024: bone12
+    400026: bone13
+    400028: bone14
+    400030: bone15
+    400032: bone17
+    400034: bone18
+    400036: bone20
+    400038: bone21
+    400040: bone23
+    400042: bone24
+    400044: bone25
+    400046: bone26
+    400048: bone27
+    400050: bone29
+    400052: bone30
+    400054: bone31
+    400056: bone32
+    400058: bone33
+    400060: bone34
+    400062: breast
+    400064: Chest
+    400066: Down
+    400068: Dummy01
+    400070: Dummy02
+    400072: Dummy03
+    400074: Dummy04
+    400076: Dummy05
+    400078: Dummy06
+    400080: Dummy07
+    400082: Dummy08
+    400084: Dummy09
+    400086: Dummy10
+    400088: Dummy11
+    400090: head
+    400092: IK Chain01
+    400094: IK Chain02
+    400096: IK Chain03
+    400098: IK Chain04
+    400100: IK Chain05
+    400102: IK Chain06
+    400104: left_foot
+    400106: left_hand
+    400108: Name
+    400110: Particle View 01
+    400112: right_foot
+    400114: right_hand
+    400116: //RootNode
+    7400000: stand
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: stand
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armor_00
+        weight: 1
+      - path: BodyRig
+        weight: 1
+      - path: BodyRig/breast
+        weight: 1
+      - path: BodyRig/breast/bone09
+        weight: 1
+      - path: BodyRig/breast/bone09/bone10
+        weight: 1
+      - path: BodyRig/breast/bone09/bone10/Dummy01
+        weight: 1
+      - path: BodyRig/breast/bone09/bone10/Dummy02
+        weight: 1
+      - path: BodyRig/breast/bone09/bone10/Dummy03
+        weight: 1
+      - path: BodyRig/breast/bone09/bone10/Dummy04
+        weight: 1
+      - path: BodyRig/breast/bone09/bone10/Dummy05
+        weight: 1
+      - path: BodyRig/breast/bone11
+        weight: 1
+      - path: BodyRig/breast/bone11/bone12
+        weight: 1
+      - path: BodyRig/breast/bone11/bone12/bone13
+        weight: 1
+      - path: BodyRig/breast/bone14
+        weight: 1
+      - path: BodyRig/breast/bone14/bone15
+        weight: 1
+      - path: BodyRig/breast/bone14/bone15/left_hand
+        weight: 1
+      - path: BodyRig/breast/bone17
+        weight: 1
+      - path: BodyRig/breast/bone17/bone18
+        weight: 1
+      - path: BodyRig/breast/bone17/bone18/left_foot
+        weight: 1
+      - path: BodyRig/breast/bone20
+        weight: 1
+      - path: BodyRig/breast/bone20/bone21
+        weight: 1
+      - path: BodyRig/breast/bone20/bone21/right_foot
+        weight: 1
+      - path: BodyRig/breast/bone23
+        weight: 1
+      - path: BodyRig/breast/bone23/bone24
+        weight: 1
+      - path: BodyRig/breast/bone23/bone24/bone25
+        weight: 1
+      - path: BodyRig/breast/bone26
+        weight: 1
+      - path: BodyRig/breast/bone26/bone27
+        weight: 1
+      - path: BodyRig/breast/bone26/bone27/right_hand
+        weight: 1
+      - path: BodyRig/breast/bone29
+        weight: 1
+      - path: BodyRig/breast/bone29/bone30
+        weight: 1
+      - path: BodyRig/breast/bone29/bone30/bone31
+        weight: 1
+      - path: BodyRig/breast/bone32
+        weight: 1
+      - path: BodyRig/breast/bone32/bone33
+        weight: 1
+      - path: BodyRig/breast/bone32/bone33/bone34
+        weight: 1
+      - path: BodyRig/breast/Chest
+        weight: 1
+      - path: BodyRig/breast/head
+        weight: 1
+      - path: BodyRig/breast/head/bone02
+        weight: 1
+      - path: BodyRig/breast/head/bone02/bone03
+        weight: 1
+      - path: BodyRig/breast/head/bone02/bone03/bone04
+        weight: 1
+      - path: BodyRig/breast/head/bone05
+        weight: 1
+      - path: BodyRig/breast/head/bone05/bone06
+        weight: 1
+      - path: BodyRig/breast/head/bone05/bone06/bone07
+        weight: 1
+      - path: BodyRig/breast/head/bone08
+        weight: 1
+      - path: BodyRig/Down
+        weight: 1
+      - path: BodyRig/Dummy06
+        weight: 1
+      - path: BodyRig/Dummy06/IK Chain01
+        weight: 1
+      - path: BodyRig/Dummy07
+        weight: 1
+      - path: BodyRig/Dummy07/IK Chain02
+        weight: 1
+      - path: BodyRig/Dummy08
+        weight: 1
+      - path: BodyRig/Dummy08/IK Chain03
+        weight: 1
+      - path: BodyRig/Dummy09
+        weight: 1
+      - path: BodyRig/Dummy09/IK Chain04
+        weight: 1
+      - path: BodyRig/Dummy10
+        weight: 1
+      - path: BodyRig/Dummy10/IK Chain05
+        weight: 1
+      - path: BodyRig/Dummy11
+        weight: 1
+      - path: BodyRig/Dummy11/IK Chain06
+        weight: 1
+      - path: BodyRig/Name
+        weight: 1
+      - path: Particle View 01
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 17317f735b948d44c825c250898984d4,
+    type: 3}
+  animationType: 2
+  additionalBone: 0
+  userData: 
