@@ -9,13 +9,16 @@ public class CameraFollow : MonoBehaviour
 
     public Vector3 offset;
 
-    void LateUpdate()
+    private void Start()
     {
-        if(Input.GetMouseButton(1))
-        {
-            offset = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * turnSpeed, Vector3.up) * offset;
-        }
-        transform.position = player.position + offset;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void Look(float horizontal)
+    {
+        offset = Quaternion.AngleAxis(horizontal, Vector3.up) * offset;
+        transform.position = Vector3.Lerp(transform.position, player.position + offset, turnSpeed);
         transform.LookAt(player.position);
     }
 }

@@ -6,9 +6,11 @@ public class Movement : MonoBehaviour
 {
     public float speed;
     public float rotationSpeed;
-    public Animator[] weaponAnimators;
+    public RuntimeAnimatorController[] weaponAnimators;
 
-    Dictionary<string, Animator> findWeaponAnimations = new Dictionary<string, Animator>();
+    public static bool canMove;
+
+    Dictionary<string, RuntimeAnimatorController> findWeaponAnimations = new Dictionary<string, RuntimeAnimatorController>();
 
     Vector3 movement;
     Animator animator;
@@ -20,7 +22,9 @@ public class Movement : MonoBehaviour
         animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
 
-        foreach(Animator weaponAnimator in weaponAnimators)
+        canMove = true;
+
+        foreach(RuntimeAnimatorController weaponAnimator in weaponAnimators)
         {
             findWeaponAnimations.Add(weaponAnimator.name, weaponAnimator);
         }
@@ -28,27 +32,31 @@ public class Movement : MonoBehaviour
 
     public void Move(float vertical, float horizontal)
     {
-        Vector3 forward = Camera.main.transform.TransformDirection(Vector3.forward);
-        forward.y = 0;
-        forward = forward.normalized;
-        Vector3 right = new Vector3(forward.z, 0, -forward.x);
-        movement = ((horizontal * right) + (vertical * forward)) * Time.deltaTime;
-
-        if (movement != Vector3.zero)
+        if (canMove)
         {
-            animator.SetBool("IsIdle", false);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), Time.deltaTime * rotationSpeed);
-            transform.position += transform.forward * speed * Time.deltaTime;
-        }
-        else
-            animator.SetBool("IsIdle", true);
+            Vector3 forward = Camera.main.transform.TransformDirection(Vector3.forward);
+            forward.y = 0;
+            forward = forward.normalized;
+            Vector3 right = new Vector3(forward.z, 0, -forward.x);
+            movement = ((horizontal * right) + (vertical * forward)) * Time.deltaTime;
 
-        MovementAnimations(vertical, horizontal);
+
+            if (movement != Vector3.zero)
+            {
+                animator.SetBool("IsIdle", false);
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), Time.deltaTime * rotationSpeed);
+                transform.position += transform.forward * speed * Time.deltaTime;
+            }
+            else
+                animator.SetBool("IsIdle", true);
+
+            MovementAnimations(vertical, horizontal);
+        }
     }
 
     public void UpdateAnimator(Weapon newWeapon)
     {
-        animatorOverrideController = new AnimatorOverrideController(findWeaponAnimations[newWeapon.name].runtimeAnimatorController);
+        animatorOverrideController = new AnimatorOverrideController(findWeaponAnimations[newWeapon.name]);
         animator.runtimeAnimatorController = animatorOverrideController;
     }
 

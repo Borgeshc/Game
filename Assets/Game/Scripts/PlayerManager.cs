@@ -7,21 +7,50 @@ public class PlayerManager : MonoBehaviour
     string saveData;
     Controls controls;
     Movement movement;
+    Attack attack;
     Weapon currentWeapon;
+    CameraFollow myCamera;
 
     void Start ()
     {
         movement = GetComponent<Movement>();
+        attack = GetComponent<Attack>();
+        myCamera = Camera.main.GetComponent<CameraFollow>();
 	}
     
     void Update ()
     {
         Move(controls.Move.Y, controls.Move.X);
-	}
+        if(controls.Fire)
+            PrimaryFire();
 
-    void Move(float _vertical, float _horizontal)
+        if (controls.Aim)
+            SecondaryFire();
+    }
+
+    private void LateUpdate()
     {
-        movement.Move(_vertical, _horizontal);
+        Look(controls.Look.X);
+    }
+
+    void Move(float vertical, float horizontal)
+    {
+        movement.Move(vertical, horizontal);
+    }
+
+    void Look(float horizontal)
+    {
+        myCamera.Look(horizontal);
+    }
+
+    void PrimaryFire()
+    {
+        attack.PrimaryFire();
+    }
+
+    void SecondaryFire()
+    {
+        attack.SecondaryFire();
     }
 
     public void SetWeapon(Weapon newWeapon)
