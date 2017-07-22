@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public static bool canMove;
+    public static bool isDead;
+
+    static GameObject player;
+
     string saveData;
     Controls controls;
     Movement movement;
@@ -16,11 +21,16 @@ public class PlayerManager : MonoBehaviour
         movement = GetComponent<Movement>();
         attack = GetComponent<Attack>();
         myCamera = Camera.main.GetComponent<CameraFollow>();
+        canMove = true;
+        player = gameObject;
 	}
     
     void Update ()
     {
-        Move(controls.Move.Y, controls.Move.X);
+        if (canMove)
+        {
+            Move(controls.Move.Y, controls.Move.X);
+        }
         if(controls.Fire)
             PrimaryFire();
 
@@ -31,6 +41,14 @@ public class PlayerManager : MonoBehaviour
     private void LateUpdate()
     {
         Look(controls.Look.X);
+    }
+
+    public static GameObject TargetingSystem()
+    {
+        RaycastHit hit;
+        if (Physics.CapsuleCast(player.transform.position, player.transform.forward * 20, 5, player.transform.forward, out hit))
+            return hit.transform.gameObject;
+        else return null;
     }
 
     void Move(float vertical, float horizontal)

@@ -8,8 +8,6 @@ public class Movement : MonoBehaviour
     public float rotationSpeed;
     public RuntimeAnimatorController[] weaponAnimators;
 
-    public static bool canMove;
-
     Dictionary<string, RuntimeAnimatorController> findWeaponAnimations = new Dictionary<string, RuntimeAnimatorController>();
 
     Vector3 movement;
@@ -22,8 +20,6 @@ public class Movement : MonoBehaviour
         animatorOverrideController = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverrideController;
 
-        canMove = true;
-
         foreach(RuntimeAnimatorController weaponAnimator in weaponAnimators)
         {
             findWeaponAnimations.Add(weaponAnimator.name, weaponAnimator);
@@ -32,8 +28,6 @@ public class Movement : MonoBehaviour
 
     public void Move(float vertical, float horizontal)
     {
-        if (canMove)
-        {
             Vector3 forward = Camera.main.transform.TransformDirection(Vector3.forward);
             forward.y = 0;
             forward = forward.normalized;
@@ -44,14 +38,16 @@ public class Movement : MonoBehaviour
             if (movement != Vector3.zero)
             {
                 animator.SetBool("IsIdle", false);
-                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(movement), Time.deltaTime * rotationSpeed);
-                transform.position += transform.forward * speed * Time.deltaTime;
-            }
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(forward), Time.deltaTime * rotationSpeed);
+            //transform.position += transform.forward * speed * Time.deltaTime;
+
+            transform.Translate(Vector3.forward * speed * vertical * Time.deltaTime);
+            transform.Translate(Vector3.right * speed * horizontal * Time.deltaTime);
+        }
             else
                 animator.SetBool("IsIdle", true);
 
             MovementAnimations(vertical, horizontal);
-        }
     }
 
     public void UpdateAnimator(Weapon newWeapon)

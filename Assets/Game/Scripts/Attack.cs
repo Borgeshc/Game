@@ -7,6 +7,14 @@ public class Attack : MonoBehaviour
     public Animator anim;
     public AudioSource source;
 
+    public float primaryFireDamage;
+    public float secondaryFireDamage;
+
+    public AudioClip leftWeaponClip;
+    public AudioClip rightWeaponClip;
+    public GameObject leftMuzzleFlash;
+    public GameObject rightMuzzleFlash;
+
     bool onGlobalCooldown;
     int primaryFire;
     int secondaryFire;
@@ -15,7 +23,7 @@ public class Attack : MonoBehaviour
     { 
         if(!onGlobalCooldown)
         {
-            Movement.canMove = false;
+            PlayerManager.canMove = false;
             anim.SetBool("PrimaryFiring", true);
             primaryFire++;
 
@@ -24,22 +32,31 @@ public class Attack : MonoBehaviour
 
             anim.SetInteger("PrimaryFire", primaryFire);
 
+            if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
+            {
+                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(primaryFireDamage);
+            }
+
             onGlobalCooldown = true;
             StartCoroutine(GlobalCooldown());
         }
     }
 
-    public void PlaySound(AudioClip clip)
+    public void PrimaryWeaponFired()
     {
-        source.clip = clip;
+        source.clip = leftWeaponClip;
         source.Play();
+
+     
+
+        StartCoroutine(MuzzleFlash(leftMuzzleFlash));
     }
 
     public void SecondaryFire()
     {
         if (!onGlobalCooldown)
         {
-            Movement.canMove = false;
+            PlayerManager.canMove = false;
             anim.SetBool("SecondaryFiring", true);
             secondaryFire++;
 
@@ -48,16 +65,42 @@ public class Attack : MonoBehaviour
 
             anim.SetInteger("SecondaryFire", secondaryFire);
 
+            if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
+            {
+                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(primaryFireDamage);
+            }
+
             onGlobalCooldown = true;
             StartCoroutine(GlobalCooldown());
         }
     }
 
+    public void SecondaryWeaponFired()
+    {
+        source.clip = rightWeaponClip;
+        source.Play();
+
+        if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
+        {
+            PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(secondaryFireDamage);
+        }
+
+        StartCoroutine(MuzzleFlash(rightMuzzleFlash));
+    }
+
+    IEnumerator MuzzleFlash(GameObject muzzleflash)
+    {
+        muzzleflash.SetActive(true);
+        yield return new WaitForSeconds(.2f);
+        muzzleflash.SetActive(false);
+    }
+
+
     IEnumerator GlobalCooldown()
     {
         yield return new WaitForSeconds(.5f);
         onGlobalCooldown = false;
-        Movement.canMove = true;
+        PlayerManager.canMove = true;
         anim.SetBool("PrimaryFiring", false);
         anim.SetBool("SecondaryFiring", false);
     }
