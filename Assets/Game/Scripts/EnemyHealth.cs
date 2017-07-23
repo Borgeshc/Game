@@ -9,16 +9,20 @@ public class EnemyHealth : MonoBehaviour
     public Image healthBar;
     public Text regularCombatText;
     public Text criticalCombatText;
+    public AudioClip[] hurtSounds;
 
-    EnemyAI enemyAI;
-    float health;
+    AudioSource source;
     Animator anim;
+    EnemyAI enemyAI;
+
+    float health;
 
     bool isDead;
 
 	void Start ()
     {
         health = maxHealth;
+        source = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         enemyAI = GetComponent<EnemyAI>();
         UpdateHealthBar();
@@ -61,6 +65,7 @@ public class EnemyHealth : MonoBehaviour
     void Hit()
     {
         anim.SetTrigger("Hit");
+        source.PlayOneShot(hurtSounds[Random.Range(0, hurtSounds.Length)]);
     }
 
     IEnumerator FloatingCombatText(float damagedAmt, Text combatText)
@@ -87,5 +92,10 @@ public class EnemyHealth : MonoBehaviour
         anim.SetBool("Died", true);
 
         Destroy(gameObject, 10);
+    }
+
+    public void DeathSound(AudioClip deathSound)
+    {
+        source.PlayOneShot(deathSound);
     }
 }

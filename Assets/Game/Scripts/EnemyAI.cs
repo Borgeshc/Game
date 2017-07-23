@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     public float maxDamage;
     public float critChance;
     public bool canShakeCam;
+    public AudioClip[] attackSounds;
 
     float attackFrequency;
 
@@ -24,10 +25,13 @@ public class EnemyAI : MonoBehaviour
     Animator anim;
     Coroutine startAttacking;
     CameraShake cameraShake;
+    AudioSource source;
 
+    int attackChosen;
     int stateChangeRate;
     int state;
     int timer;
+
     bool waiting;
     bool changeState;
     bool isDead;
@@ -40,6 +44,7 @@ public class EnemyAI : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
+        source = GetComponent<AudioSource>();
         stateChangeRate = 3;
     }
 
@@ -107,9 +112,14 @@ public class EnemyAI : MonoBehaviour
         transform.position += (transform.forward * speed * Time.deltaTime);
     }
 
+    public void WalkSound(AudioClip walkSound)
+    {
+        source.PlayOneShot(walkSound);
+    }
+
     void Attack()
     {
-        if (player == null) return;
+        if (player == null || isDead) return;
 
         agent.SetDestination(player.transform.position);
 
@@ -133,13 +143,13 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator StartAttacking()
     {
-        anim.SetInteger("Attack", Random.Range(1, 5));
+        attackChosen = Random.Range(1, 4);
+        anim.SetInteger("Attack", attackChosen);
         yield return new WaitForSeconds(.5f);
 
         anim.SetInteger("Attack", 0);
 
         attackFrequency = Random.Range(minAttackFrequency, maxAttackFrequency);
-        //Damage
         yield return new WaitForSeconds(attackFrequency);
         anim.SetInteger("Attack", 0);
         attacking = false;
@@ -156,6 +166,7 @@ public class EnemyAI : MonoBehaviour
 
     public void Damage()
     {
+        source.PlayOneShot(attackSounds[attackChosen]);
 
         if (canShakeCam)
             ShakeCam();
@@ -172,6 +183,7 @@ public class EnemyAI : MonoBehaviour
         agent.SetDestination(transform.position);
         agent.speed = 0;
         agent.velocity = Vector3.zero;
+        anim.SetBool("IsIdle", true);
     }
 
     void ShakeCam()

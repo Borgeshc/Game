@@ -21,6 +21,7 @@ public class PlayerManager : MonoBehaviour
     Weapon currentWeapon;
     CameraFollow myCamera;
     CameraShake cameraShake;
+    RaycastHit hit;
 
     void Start ()
     {
@@ -36,9 +37,9 @@ public class PlayerManager : MonoBehaviour
     
     void Update ()
     {
-        if(target != null)
+        if (target != null)
+            print(target);
 
-        RaycastHit hit;
         if (Physics.CapsuleCast(player.transform.position, player.transform.forward, 5, player.transform.forward, out hit, 20, _targetableLayer))
             target = hit.transform.gameObject;
 
