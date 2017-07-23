@@ -75,6 +75,7 @@ public class EnemyHealth : MonoBehaviour
 
     void Died()
     {
+        GetComponent<Collider>().enabled = false;
         anim.SetBool("Died", true);
     }
 }
