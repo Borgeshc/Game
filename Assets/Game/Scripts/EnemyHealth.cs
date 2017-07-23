@@ -27,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
     public void TookDamage(float damage)
     {
         if (isDead) return;
+        enemyAI.Pulled();
         Hit();
 
         if (CritChance())

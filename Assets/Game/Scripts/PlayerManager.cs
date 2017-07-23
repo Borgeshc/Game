@@ -6,6 +6,11 @@ public class PlayerManager : MonoBehaviour
 {
     public static bool canMove;
     public static bool isDead;
+    public static GameObject target;
+
+    public LayerMask targetableLayer;
+
+    public static LayerMask _targetableLayer;
 
     static GameObject player;
 
@@ -15,18 +20,28 @@ public class PlayerManager : MonoBehaviour
     Attack attack;
     Weapon currentWeapon;
     CameraFollow myCamera;
+    CameraShake cameraShake;
 
     void Start ()
     {
         movement = GetComponent<Movement>();
         attack = GetComponent<Attack>();
         myCamera = Camera.main.GetComponent<CameraFollow>();
+        cameraShake = myCamera.GetComponent<CameraShake>();
         canMove = true;
         player = gameObject;
+
+        _targetableLayer = targetableLayer;
 	}
     
     void Update ()
     {
+        if(target != null)
+
+        RaycastHit hit;
+        if (Physics.CapsuleCast(player.transform.position, player.transform.forward, 5, player.transform.forward, out hit, 20, _targetableLayer))
+            target = hit.transform.gameObject;
+
         if (canMove)
         {
             Move(controls.Move.Y, controls.Move.X);
@@ -43,14 +58,6 @@ public class PlayerManager : MonoBehaviour
         Look(controls.Look.X);
     }
 
-    public static GameObject TargetingSystem()
-    {
-        RaycastHit hit;
-        if (Physics.CapsuleCast(player.transform.position, player.transform.forward * 20, 5, player.transform.forward, out hit))
-            return hit.transform.gameObject;
-        else return null;
-    }
-
     void Move(float vertical, float horizontal)
     {
         movement.Move(vertical, horizontal);
@@ -58,7 +65,8 @@ public class PlayerManager : MonoBehaviour
 
     void Look(float horizontal)
     {
-        myCamera.Look(horizontal);
+        if(!cameraShake.Shaking)
+            myCamera.Look(horizontal);
     }
 
     void PrimaryFire()

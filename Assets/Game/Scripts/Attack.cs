@@ -35,9 +35,9 @@ public class Attack : MonoBehaviour
 
             anim.SetInteger("PrimaryFire", primaryFire);
 
-            if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
+            if (PlayerManager.target != null && PlayerManager.target.tag.Equals("Enemy"))
             {
-                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(Random.Range(minPrimaryDamage, maxPrimaryDamage));
+                PlayerManager.target.GetComponent<EnemyHealth>().TookDamage(Random.Range(minPrimaryDamage, maxPrimaryDamage));
             }
 
             onGlobalCooldown = true;
@@ -49,8 +49,6 @@ public class Attack : MonoBehaviour
     {
         source.clip = leftWeaponClip;
         source.Play();
-
-     
 
         StartCoroutine(MuzzleFlash(leftMuzzleFlash));
     }
@@ -68,9 +66,9 @@ public class Attack : MonoBehaviour
 
             anim.SetInteger("SecondaryFire", secondaryFire);
 
-            if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
+            if (PlayerManager.target != null && PlayerManager.target.tag.Equals("Enemy"))
             {
-                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(Random.Range(minSecondaryDamage, maxSecondaryDamage));
+                PlayerManager.target.GetComponent<EnemyHealth>().TookDamage(Random.Range(minSecondaryDamage, maxSecondaryDamage));
             }
 
             onGlobalCooldown = true;
