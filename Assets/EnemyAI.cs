@@ -94,6 +94,7 @@ public class EnemyAI : MonoBehaviour
 
     void Attack()
     {
+        //This needs to be adjusted
         float angleToTarget = Mathf.Atan2((player.transform.position.x - transform.position.x), (player.transform.position.z - transform.position.z)) * Mathf.Rad2Deg;
         transform.eulerAngles = new Vector3(0, Mathf.MoveTowardsAngle(transform.eulerAngles.y, angleToTarget, Time.deltaTime * rotationSpeed), 0);
 
