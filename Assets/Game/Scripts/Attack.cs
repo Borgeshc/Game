@@ -7,8 +7,11 @@ public class Attack : MonoBehaviour
     public Animator anim;
     public AudioSource source;
 
-    public float primaryFireDamage;
-    public float secondaryFireDamage;
+    public int minPrimaryDamage;
+    public int maxPrimaryDamage;
+
+    public int minSecondaryDamage;
+    public int maxSecondaryDamage;
 
     public AudioClip leftWeaponClip;
     public AudioClip rightWeaponClip;
@@ -34,7 +37,7 @@ public class Attack : MonoBehaviour
 
             if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
             {
-                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(primaryFireDamage);
+                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(Random.Range(minPrimaryDamage, maxPrimaryDamage));
             }
 
             onGlobalCooldown = true;
@@ -67,7 +70,7 @@ public class Attack : MonoBehaviour
 
             if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
             {
-                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(primaryFireDamage);
+                PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(Random.Range(minSecondaryDamage, maxSecondaryDamage));
             }
 
             onGlobalCooldown = true;
@@ -79,11 +82,6 @@ public class Attack : MonoBehaviour
     {
         source.clip = rightWeaponClip;
         source.Play();
-
-        if (PlayerManager.TargetingSystem().tag.Equals("Enemy"))
-        {
-            PlayerManager.TargetingSystem().GetComponent<EnemyHealth>().TookDamage(secondaryFireDamage);
-        }
 
         StartCoroutine(MuzzleFlash(rightMuzzleFlash));
     }
