@@ -10,18 +10,23 @@ public class EnemyHealth : MonoBehaviour
     public Text regularCombatText;
     public Text criticalCombatText;
 
+    EnemyAI enemyAI;
     float health;
     Animator anim;
+
+    bool isDead;
 
 	void Start ()
     {
         health = maxHealth;
         anim = GetComponent<Animator>();
+        enemyAI = GetComponent<EnemyAI>();
         UpdateHealthBar();
 	}
 
     public void TookDamage(float damage)
     {
+        if (isDead) return;
         Hit();
 
         if (CritChance())
@@ -75,7 +80,11 @@ public class EnemyHealth : MonoBehaviour
 
     void Died()
     {
+        isDead = true;
+        enemyAI.Died();
         GetComponent<Collider>().enabled = false;
         anim.SetBool("Died", true);
+
+        Destroy(gameObject, 10);
     }
 }
