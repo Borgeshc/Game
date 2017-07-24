@@ -2089,10 +2089,11 @@ MonoBehaviour:
   rotationSpeed: 10
   aggroDistance: 15
   attackDistance: 2.5
+  resetDistance: 25
   minAttackFrequency: 1
   maxAttackFrequency: 2
-  minDamage: 1
-  maxDamage: 3
+  minDamage: 20
+  maxDamage: 40
   critChance: 50
   canShakeCam: 1
   attackSounds:

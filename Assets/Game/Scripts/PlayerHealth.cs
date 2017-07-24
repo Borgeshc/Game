@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public Image healthBar;
+    public GameObject damageBoarder;
     public AudioSource source;
     public AudioClip[] hurtSounds;
 
@@ -32,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (PlayerManager.isDead) return;
 
-        Hit();
+        StartCoroutine(Hit());
 
         if (CritChance(critChance))
         {
@@ -60,10 +61,13 @@ public class PlayerHealth : MonoBehaviour
             return false;
     }
 
-    void Hit()
+    IEnumerator Hit()
     {
         anim.SetTrigger("Hit");
         source.PlayOneShot(hurtSounds[Random.Range(0, hurtSounds.Length)]);
+        damageBoarder.SetActive(true);
+        yield return new WaitForSeconds(.15f);
+        damageBoarder.SetActive(false);
     }
 
     void UpdateHealthBar()

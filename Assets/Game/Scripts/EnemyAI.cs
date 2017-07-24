@@ -75,7 +75,6 @@ public class EnemyAI : MonoBehaviour
         {
             stateChangeRate = Random.Range(1, 10);
             changeState = true;
-            print(state);
             state = Random.Range(0, 2);
             if(!waiting)
             {
