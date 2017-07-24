@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
     public static int vitality;
     public static int critChance;
 
-	void Start ()
+	void Awake ()
     {
         vitality = _vitality;
         critChance = _critChance;

@@ -10,11 +10,12 @@ public class EnemyAI : MonoBehaviour
     public float rotationSpeed;
     public float aggroDistance;
     public float attackDistance;
+    public float resetDistance;
     public float minAttackFrequency;
     public float maxAttackFrequency;
     public float minDamage;
     public float maxDamage;
-    public float critChance;
+    public int critChance;
     public bool canShakeCam;
     public AudioClip[] attackSounds;
 
@@ -52,11 +53,15 @@ public class EnemyAI : MonoBehaviour
     {
         if (isDead) return;
 
-        if (player != null && Vector3.Distance(transform.position, player.transform.position) < aggroDistance)
+        if (player != null  && !PlayerManager.isDead && Vector3.Distance(transform.position, player.transform.position) < aggroDistance)
         {
             aggrod = true;
         }
 
+        if (player != null && !PlayerManager.isDead && Vector3.Distance(transform.position, player.transform.position) > resetDistance)
+        {
+            ResetPathingBehaviour();
+        }
 
         if (aggrod)
         {
@@ -166,10 +171,25 @@ public class EnemyAI : MonoBehaviour
 
     public void Damage()
     {
+        player.GetComponent<PlayerHealth>().TookDamage((int)Random.Range(minDamage, maxDamage), critChance);
         source.PlayOneShot(attackSounds[attackChosen]);
 
         if (canShakeCam)
             ShakeCam();
+
+        if (PlayerManager.isDead)
+        {
+            ResetPathingBehaviour();
+        }
+    }
+
+    void ResetPathingBehaviour()
+    {
+        aggrod = false;
+        StopAttacking();
+        agent.SetDestination(transform.position);
+        agent.speed = 0;
+        agent.velocity = Vector3.zero;
     }
 
     public void Pulled()

@@ -2091,9 +2091,9 @@ MonoBehaviour:
   attackDistance: 2.5
   minAttackFrequency: 1
   maxAttackFrequency: 2
-  minDamage: 0
-  maxDamage: 0
-  critChance: 0
+  minDamage: 1
+  maxDamage: 3
+  critChance: 50
   canShakeCam: 1
   attackSounds:
   - {fileID: 8300000, guid: 4cda3c59100dae547a3304a00c0d9e2b, type: 3}

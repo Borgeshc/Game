@@ -37,6 +37,8 @@ public class PlayerManager : MonoBehaviour
     
     void Update ()
     {
+        if (isDead) return;
+
         if (target != null)
             print(target);
 
