@@ -35,7 +35,7 @@ public class Attack : MonoBehaviour
 
             anim.SetInteger("PrimaryFire", primaryFire);
 
-            if (PlayerManager.target != null && PlayerManager.target.tag.Equals("Enemy"))
+            if (PlayerManager.target != null)
             {
                 PlayerManager.target.GetComponent<EnemyHealth>().TookDamage(Random.Range(minPrimaryDamage, maxPrimaryDamage));
             }

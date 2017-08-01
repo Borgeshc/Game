@@ -1606,7 +1606,7 @@ Transform:
   m_GameObject: {fileID: 1080137910961534}
   m_LocalRotation: {x: -0, y: 0.70710707, z: -0, w: 0.70710653}
   m_LocalPosition: {x: -26.21, y: 0, z: 13.54}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 200, y: 200, z: 200}
   m_Children:
   - {fileID: 4606242769904196}
   - {fileID: 4934362424714240}
@@ -1812,8 +1812,8 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
-  MinDistance: 20
+  DopplerLevel: 0.26
+  MinDistance: 18.52
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
   attackSpeed: 4
   rotationSpeed: 10
   aggroDistance: 15
-  attackDistance: 2.5
+  attackDistance: 4
   resetDistance: 25
   minAttackFrequency: 1
   maxAttackFrequency: 2

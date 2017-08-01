@@ -9,9 +9,6 @@ public class PlayerManager : MonoBehaviour
     public static GameObject target;
 
     public LayerMask targetableLayer;
-
-    public static LayerMask _targetableLayer;
-
     static GameObject player;
 
     string saveData;
@@ -31,16 +28,19 @@ public class PlayerManager : MonoBehaviour
         cameraShake = myCamera.GetComponent<CameraShake>();
         canMove = true;
         player = gameObject;
-
-        _targetableLayer = targetableLayer;
 	}
     
     void Update ()
     {
         if (isDead) return;
 
-        if (Physics.CapsuleCast(player.transform.position, player.transform.forward, 5, player.transform.forward, out hit, 20, _targetableLayer))
-            target = hit.transform.gameObject;
+        if(target !=  null)
+        {
+            print(target);
+        }
+
+        if (Physics.CapsuleCast(player.transform.position, player.transform.forward, 5, player.transform.forward, out hit, 20, targetableLayer))
+            target = hit.transform.root.gameObject;
 
         if (canMove)
         {
